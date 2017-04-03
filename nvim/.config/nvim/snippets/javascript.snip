@@ -1,0 +1,13 @@
+snippet switch
+options head
+    switch (${1:#:var}) {
+    case ${2:#:val}:
+      ${0:TARGET}
+      break;
+  }
+
+snippet case
+options head
+    case ${1:#:val}:
+      ${0:TARGET}
+      break;

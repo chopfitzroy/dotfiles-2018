@@ -1,0 +1,13 @@
+# Ignore all files in nvim
+nvim/.config/nvim/*
+
+# Track config files and snippets
+!nvim/.config/nvim/*.vim
+!nvim/.config/nvim/snippets/
+
+# Ignore all files in fish
+fish/.config/fish/*
+
+# Track config files and plugins list
+!fish/.config/fish/*.fish
+!fish/.config/fish/fishfile

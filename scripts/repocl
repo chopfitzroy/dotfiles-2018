@@ -1,0 +1,25 @@
+#!/bin/bash
+
+RED='\033[0;31m'
+CYAN='\033[0;36m'
+PINK='\033[0;35m'
+NO_COLOUR='\033[0m'
+
+# Initialise counters:
+let count_all=0
+
+# Find git repos and loop over them:
+for repo in `find . -type d -name ".git"`
+do
+    # cd to the dir that contains .git/:
+    dir=`echo ${repo} | sed -e 's/\/.git/\//'`
+    if [[ -d "$dir" ]]; then
+      let count_all=${count_all}+1
+      cd ${dir}
+      echo -e "${PINK}[GC]${NO_COLOUR} Cleaning ${CYAN}$(pwd)${NO_COLOUR}"
+      git clean -xdf &> /dev/null
+      cd - &> /dev/null
+    fi
+done
+echo -e "${PINK}[GC]${NO_COLOUR} Cleaned: ${RED}${count_all}${NO_COLOUR} repositories"
+

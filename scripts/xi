@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ARGS="$*";
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+  nvr --remote ${ARGS}
+else
+  nvim ${ARGS}
+fi

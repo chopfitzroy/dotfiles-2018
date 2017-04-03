@@ -1,0 +1,26 @@
+#!/bin/bash
+
+theme=$1
+background=$2
+
+if [ -z "$theme" ]; then
+
+    echo "Please provide a theme name."
+
+else
+
+
+    # Set background to dark if undefined
+    if [ -z "$background" ]; then
+        background="dark"
+    fi
+
+    # Generate themes
+    base16-builder -s $theme -t vim -b $background > ~/.config/nvim/colors/base16-$theme.vim &&
+    base16-builder -s $theme -t vim-airline -b $background > ~/.vim/plugged/vim-airline-themes/autoload/airline/themes/base16_$theme.vim
+
+    # Set themes in config.fish and init.vim
+    sed -i "s/\(base16\)\([-_]\)\([a-zA-Z]*\)/\1\2$theme/g" ~/.config/nvim/config.vim
+    sed -i "s/\(set background=\)\([a-zA-Z]*\)/\1$background/g" ~/.config/nvim/config.vim
+
+fi

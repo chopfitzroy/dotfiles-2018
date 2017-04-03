@@ -1,0 +1,38 @@
+[user]
+    email = otis@shipwrecked.co
+    name = Otis Wright
+[push]
+    default = upstream
+[core]
+    editor = xi 
+    packedGitLimit = 512m 
+    packedGitWindowSize = 512m 
+    filemode = false
+[pack] 
+    deltaCacheSize = 2047m 
+    packSizeLimit = 2047m 
+    windowMemory = 2047m
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+[help]
+    autocorrect = 10
+[branch]
+    autosetuprebase = always
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[mergetool]
+	keepBackup = false
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
