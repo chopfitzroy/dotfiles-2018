@@ -28,7 +28,7 @@ set cursorline
 set mouse-=a
 
 " Share clipboards
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 " Disable paste mode
 set nopaste
