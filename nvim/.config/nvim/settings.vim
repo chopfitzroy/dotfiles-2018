@@ -33,6 +33,11 @@ set clipboard=unnamedplus
 " Disable paste mode
 set nopaste
 
+" Ignore case when searching
+set ignorecase
+" Make search case sensitive if a capital is used
+set smartcase
+
 " Show relativenumber from current line
 set relativenumber
 " Show real number at current line

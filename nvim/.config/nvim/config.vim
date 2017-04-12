@@ -1,17 +1,17 @@
 " Set colorscheme
-autocmd ColorScheme base16-railscasts call s:indent_theme()
+autocmd ColorScheme base16-summerfruit call s:indent_theme()
 
 " Theme
 function! s:indent_theme()
-  " Search for color in theme file
-  let color = synIDattr(hlID('IncSearch'), 'fg#', 'gui')
-  " Set indent colors to match theme color
-  execute 'highlight IndentGuidesOdd  guibg='. color .' ctermbg=3'
-  execute 'highlight IndentGuidesEven  guibg='. color .' ctermbg=4'
+    " Search for color in theme file
+    let color = synIDattr(hlID('IncSearch'), 'fg#', 'gui')
+    " Set indent colors to match theme color
+    execute 'highlight IndentGuidesOdd  guibg='. color .' ctermbg=3'
+    execute 'highlight IndentGuidesEven  guibg='. color .' ctermbg=4'
 endfunction
 
-colorscheme base16-railscasts
-let g:airline_theme='base16_railscasts'
+colorscheme base16-summerfruit
+let g:airline_theme='base16_summerfruit'
 
 " Set terminal buffers title
 let g:terminus_use_xterm_title = 1
@@ -32,8 +32,8 @@ au FocusLost * silent! wa
 
 " Enable neosnippet
 let g:neosnippet#disable_runtime_snippets = {
-  \   '_' : 1,
-  \ }
+            \   '_' : 1,
+            \ }
 
 " Set snippet directory
 let g:neosnippet#snippets_directory='~/.config/nvim/snippets/'
