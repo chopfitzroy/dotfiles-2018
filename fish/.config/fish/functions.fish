@@ -33,6 +33,5 @@ end
 
 # Configure keybindings
 function fish_user_key_bindings
-  bind \cf 'thefuck-command-line'  # Bind Ctrl+F to thefuck
   bind \ce 'edit_cmd' # Bind Ctrl+E to drop command into nvim
 end

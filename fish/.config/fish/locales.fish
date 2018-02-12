@@ -4,7 +4,6 @@ set -g -x fish_greeting ''
 # Add additional folders to PATH
 set -g -x PATH /usr/local/bin $PATH
 set -g -x PATH ~/.node_modules/bin $PATH
-set -g -x PATH ~/.cargo/bin $PATH
 
 # Use rg as the default command for listing files in fzf
 # --files: List files that would be searched but do not search

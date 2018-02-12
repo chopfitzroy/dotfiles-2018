@@ -47,7 +47,9 @@ sudo apt-get -y update -qq
 
 echo "Install base packages..."
 
-sudo apt-get install -y build-essential stow curl wget git git-flow htop xclip python3-dev python3-pip
+sudo apt-get install -y build-essential stow curl git
+
+echo "Installed Node.js (and global plugins)..."
 
 source ./setup/node.sh
 
@@ -55,21 +57,13 @@ if ask "Would you like to apply git config?" Y; then
     source ./setup/git.sh
 fi
 
-if ask "Would you like to install docker?" Y; then
- source ./setup/docker.sh
-fi
-
-if ask "Would you like to install tmux?" Y; then
-	source ./setup/tmux.sh
-fi
-
-if ask "Would you like to install fish?" Y; then
-    source ./setup/fish.sh
-fi
+#if ask "Would you like to install fish?" Y; then
+#    source ./setup/fish.sh
+#fi
 
 if ask "Would you like to install neovim?" Y; then
-    source ./setup/ripgrep.sh
     source ./setup/neovim.sh
+    theme solarized
 fi
 
 echo "If you installed fish please remember to run fisher to install plugins"

@@ -43,7 +43,7 @@ let g:deoplete#enable_at_startup = 1
 
 " Add buffers and tern completions to deoplete sources
 let g:deoplete#sources = {}
-let g:deoplete#sources = ['buffer', 'neosnippet', 'ternjs']
+let g:deoplete#sources = ['buffer', 'neosnippet']
 
 " Close bottom windows after closing drop down
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
