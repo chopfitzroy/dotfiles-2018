@@ -25,4 +25,3 @@ stow nvim
 # Generate theme
 # @TODO this will not always work until sourcing ~/.node_modules in node.sh is resolved
 theme solarized
-

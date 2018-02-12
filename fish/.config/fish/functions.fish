@@ -1,34 +1,16 @@
-# Drop current command into default editor 
+# Drop current command into default editor
+# @TODO this dosen't work with editors like nano so insteam of using editor I need to check for the nvim lib
+# Only if nvim exists should this execute
 function edit_cmd --description 'Input command in external editor'
   set -l f (mktemp /tmp/fish.cmd.XXXXXXXX)
   if test -n "$f"
     set -l p (commandline -C)
     commandline -b > $f
-    editor -c 'set ft=fish' $f
+    nvim -c 'set ft=fish' $f
     commandline -r (more $f)
     commandline -C $p
     command rm $f
   end
-end
-
-# Transfer.sh
-function transfer --description 'Upload a file to transfer.sh'
-  if [ $argv[1] ]
-    # write to output to tmpfile because of progress bar
-    set -l tmpfile ( mktemp -t transferXXX )
-    curl --progress-bar --upload-file $argv[1] https://transfer.sh/(basename $argv[1]) >> $tmpfile
-    cat $tmpfile
-    command rm -f $tmpfile
-else
-  echo 'usage: transfer FILE_TO_TRANSFER'
-end
-end
-
-# Upload (transfer and copy)
-function upload --description 'Upload a file and copy URL to clipboard'
-  if [ $argv[1] ]
-    transfer $argv[1] | ctc
-end
 end
 
 # Configure keybindings

@@ -57,14 +57,12 @@ if ask "Would you like to apply git config?" Y; then
     source ./setup/git.sh
 fi
 
-#if ask "Would you like to install fish?" Y; then
-#    source ./setup/fish.sh
-#fi
+if ask "Would you like to install fish?" Y; then
+    source ./setup/fish.sh
+fi
 
 if ask "Would you like to install neovim?" Y; then
     source ./setup/neovim.sh
-    theme solarized
 fi
 
 echo "If you installed fish please remember to run fisher to install plugins"
-echo "If you installed neovim please remember to run the theme command"

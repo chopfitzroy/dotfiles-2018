@@ -9,7 +9,7 @@ sudo apt-get install -y fish
 stow fish
 
 # Install fisherman
-# curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisherman
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 # Make fish default shell
 chsh -s /usr/bin/fish
