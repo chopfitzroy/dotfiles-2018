@@ -13,7 +13,7 @@ sudo snap install rg --classic
 
 # Install plugins
 pip install neovim
-sudo -H pip3 install neovim
+pip3 install neovim
 #neovim-remote
 
 # Create config directories

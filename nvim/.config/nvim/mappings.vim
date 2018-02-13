@@ -41,11 +41,6 @@ nmap <Right> <C-w><Right>
 nmap <Up> <C-w><Up>
 nmap <Down> <C-w><Down>
 
-" Snippet completion
-imap <C-s>     <Plug>(neosnippet_expand_or_jump)
-smap <C-s>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-s>     <Plug>(neosnippet_expand_target)
-
 " Location windows
 nmap <Leader>,o :lopen<CR>
 nmap <Leader>,c :lclose<CR>

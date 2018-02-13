@@ -1,3 +1,5 @@
+" Automatic install
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -16,8 +18,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Shougo/neosnippet.vim'
 " Omni completion
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Add deoplete TypeScript
+" Locked tag https://github.com/mhartington/nvim-typescript/issues/115
+Plug 'Shougo/deoplete.nvim', { 'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/nvim-typescript'
 " Code linting
 Plug 'w0rp/ale'
 " Manipulations
@@ -53,7 +56,7 @@ Plug 'tpope/vim-eunuch'
 call plug#end()
 
 " Colorscheme
-colorscheme nova
+silent! colorscheme nova
 
 " Editor Settings
 source ~/.config/nvim/settings.vim
