@@ -1,38 +1,42 @@
+" Use space for something usefule
+" https://groups.google.com/forum/m/#!msg/vim_dev/fm1a0B77yYo/qZ8WfrYamREJ
+let mapleader="\<space>"
+
 " Sane terminal bindings 
 tnoremap <ESC> <C-\><C-n>
 
 " Format Code
-nnoremap <leader>l gg=G``zz
+nmap <leader>l gg=G``zz
 
 " Tree (uses dirvish)
-nnoremap <leader>t :edit . <cr>
+nmap <leader>t :edit . <cr>
 
 " Quick search
-nnoremap <leader>s :Search <space>
+nmap <leader>s :Search <space>
 
 " Fuzzy finder using fzf
-nnoremap <leader>f :Files <cr>
+nmap <leader>f :Files <cr>
 
 " Buffers using fzf
-nnoremap <leader>b :Buffers <cr>
+nmap <leader>b :Buffers <cr>
 
 " Undo Tree
-nnoremap <leader>o :UndotreeToggle <cr>
+nmap <leader>o :UndotreeToggle <cr>
 
 " Reload from disk
-nnoremap <leader>r :set autoread <cr> :checkt <cr>
+nmap <leader>r :set autoread <cr> :checkt <cr>
 
 " Window resize
-nnoremap <C-Left> <C-w>5>
-nnoremap <C-Right> <C-w>5<
-nnoremap <C-Up> <C-w>5+
-nnoremap <C-Down> <C-w>5-
+map <C-Left> <C-w>5>
+map <C-Right> <C-w>5<
+map <C-Up> <C-w>5+
+map <C-Down> <C-w>5-
 
 " Window navigation
-map <Left> <C-w><Left>
-map <Right> <C-w><Right>
-map <Up> <C-w><Up>
-map <Down> <C-w><Down>
+nmap <Left> <C-w><Left>
+nmap <Right> <C-w><Right>
+nmap <Up> <C-w><Up>
+nmap <Down> <C-w><Down>
 
 " Snippet completion
 imap <C-s>     <Plug>(neosnippet_expand_or_jump)

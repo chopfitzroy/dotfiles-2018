@@ -10,8 +10,8 @@ function! s:indent_theme()
     execute 'highlight IndentGuidesEven  guibg='. color .' ctermbg=4'
 endfunction
 
-colorscheme base16-summerfruit
-let g:airline_theme='base16_summerfruit'
+colorscheme base16-solarized
+let g:airline_theme='base16_solarized'
 
 " Set terminal buffers title
 let g:terminus_use_xterm_title = 1
