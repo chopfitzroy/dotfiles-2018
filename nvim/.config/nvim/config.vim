@@ -1,5 +1,7 @@
+" @TODO this needs to be fixed (can be hardcoded to Nova now)
+
 " Set colorscheme
-autocmd ColorScheme base16-summerfruit call s:indent_theme()
+autocmd ColorScheme nova call s:indent_theme()
 
 " Theme
 function! s:indent_theme()
@@ -9,9 +11,6 @@ function! s:indent_theme()
     execute 'highlight IndentGuidesOdd  guibg='. color .' ctermbg=3'
     execute 'highlight IndentGuidesEven  guibg='. color .' ctermbg=4'
 endfunction
-
-colorscheme base16-solarized
-let g:airline_theme='base16_solarized'
 
 " Set terminal buffers title
 let g:terminus_use_xterm_title = 1
@@ -26,9 +25,6 @@ hi VertSplit ctermbg=NONE guibg=NONE
 
 " Safe saving
 au FocusLost * silent! wa
-
-" Disable polygot jsx highlighting
-"let g:polyglot_disabled = ['js', 'jsx']
 
 " Enable neosnippet
 let g:neosnippet#disable_runtime_snippets = {
@@ -50,9 +46,6 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Disable automatic comments on next line
 au FileType * set fo-=c fo-=r fo-=o
-
-" Emmet expand key
-let g:user_emmet_expandabbr_key = '<C-e>'
 
 " Make netrw (default vim file tree) delete more powerfull
 let g:netrw_localrmdir='rm -r'

@@ -1,11 +1,14 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
 
+" Theme
+" https://trevordmiller.com/projects/nova
+Plug 'trevordmiller/nova-vim'
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -13,8 +16,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Shougo/neosnippet.vim'
 " Omni completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Add deoplete flow
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Add deoplete TypeScript
 " Code linting
 Plug 'w0rp/ale'
 " Manipulations
@@ -28,21 +31,29 @@ Plug 'mbbill/undotree'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'brettanomyces/nvim-terminus'
 Plug 'justinmk/vim-dirvish'
-Plug 'romainl/vim-cool'
-" Language Support
-Plug 'sheerun/vim-polyglot'
-Plug 'flowtype/vim-flow'
+" Language Support (Highlighting)
+" Javascript
+Plug 'pangloss/vim-javascript'
+" TypeScript
+Plug 'HerringtonDarkholme/yats.vim'
+" JSX (React)
+Plug 'mxw/vim-jsx'
+" HTML
+Plug 'othree/html5.vim'
+" CSS
+Plug 'hail2u/vim-css3-syntax'
 " Formatting
 Plug 'sbdchd/neoformat'
 Plug 'tommcdo/vim-lion'
 " Status bar
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 " Misc
-Plug 'metakirby5/codi.vim'
 Plug 'tpope/vim-eunuch'
 
 call plug#end()
+
+" Colorscheme
+colorscheme nova
 
 " Editor Settings
 source ~/.config/nvim/settings.vim

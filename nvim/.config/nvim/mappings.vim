@@ -2,6 +2,9 @@
 " https://groups.google.com/forum/m/#!msg/vim_dev/fm1a0B77yYo/qZ8WfrYamREJ
 let mapleader="\<space>"
 
+" Emmet expand key
+let g:user_emmet_expandabbr_key = '<C-e>'
+
 " Sane terminal bindings 
 tnoremap <ESC> <C-\><C-n>
 

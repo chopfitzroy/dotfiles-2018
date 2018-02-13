@@ -12,4 +12,4 @@
 command! -bang -nargs=* Search call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " Alias Terminus for quicker access
-command Te TerminusOpen /usr/bin/fish
+" command Te TerminusOpen /usr/bin/fish
