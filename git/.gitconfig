@@ -4,7 +4,8 @@
 [push]
     default = upstream
 [core]
-    editor = xi 
+    # @TODO make this the default editor
+    editor = nvim 
     packedGitLimit = 512m 
     packedGitWindowSize = 512m 
     filemode = false
@@ -12,14 +13,6 @@
     deltaCacheSize = 2047m 
     packSizeLimit = 2047m 
     windowMemory = 2047m
-[pager]
-    diff = diff-so-fancy | less --tabs=4 -RFX
-    show = diff-so-fancy | less --tabs=4 -RFX
-[color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = red bold 52
-    newNormal = green bold
-    newHighlight = green bold 22
 [help]
     autocorrect = 10
 [branch]

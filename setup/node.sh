@@ -11,6 +11,3 @@ stow node
 # Install node
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 sudo apt-get install -y nodejs
-
-# Install globals
-npm install -g diff-so-fancy base16-builder

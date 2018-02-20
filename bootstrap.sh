@@ -49,12 +49,12 @@ echo "Install base packages..."
 
 sudo apt-get install -y build-essential stow curl git
 
-echo "Installed Node.js (and global plugins)..."
-
-source ./setup/node.sh
-
 if ask "Would you like to apply git config?" Y; then
     source ./setup/git.sh
+fi
+
+if ask "Would you like to install node?" Y; then
+    source ./setup/node.sh
 fi
 
 if ask "Would you like to install fish?" Y; then
