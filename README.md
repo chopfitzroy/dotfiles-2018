@@ -15,7 +15,7 @@ You must be running Ubuntu.
 ### Bootstrap Install
 
 ```bash
-git clone https://github.com/CrashyBang/dotfiles.git  ~/.dotfiles && ~/.dotfiles/bootstrap.sh
+git clone https://github.com/CrashyBang/dotfiles.git  ~/.dotfiles && cd ~/.dotfiles && ./bootstrap.sh
 
 ```
 
