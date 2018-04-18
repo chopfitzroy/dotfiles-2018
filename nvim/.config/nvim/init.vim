@@ -45,6 +45,8 @@ Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 " CSS
 Plug 'hail2u/vim-css3-syntax'
+" GQL
+Plug 'jparise/vim-graphql'
 " Formatting
 Plug 'sbdchd/neoformat'
 Plug 'tommcdo/vim-lion'
